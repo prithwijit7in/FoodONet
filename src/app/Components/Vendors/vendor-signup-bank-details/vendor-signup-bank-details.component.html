@@ -1,0 +1,75 @@
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+          <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">Vendor Registration</h2>
+              <ul class="progressbar text-center mb-5">
+                <li class="active">Contact Details</li>
+                <li class="active">Legal Information</li>
+                <li class="active">Bank Details</li>
+                <li>Document Upload</li>
+              </ul>
+              <h6 class="mb-3 text-center text-danger">(All Fields Are Mandatory)</h6>
+              
+              <div class="super_admin_login">
+
+                <div class="mb-3 row">
+                    <label for="bank_name" class="col-sm-3 col-form-label form-label">Bank Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="bank_name" >
+                    </div>
+                    
+                </div> 
+                <div class="mb-3 row">
+                    <label for="fssai" class="col-sm-3 col-form-label form-label">Current A/C. No</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="fssai" >
+                    </div>
+                    <label for="fssai" class="col-sm-2 col-form-label form-label">IFSC Code</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" id="ifsc" >
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="branch_name" class="col-sm-3 col-form-label form-label">Branch Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="branch_name" >
+                    </div>
+                </div> 
+               
+
+                <div class="mb-3 row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-3">
+                        <div class="ttw_button_container">
+                            <button class="ttw_button" type="submit" routerLink="/vendor_registration_legal_info" >Back</button>
+                        </div>
+                    </div>
+                  <div class="col-sm-3">
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit">Save</button>
+                    </div>
+                </div>
+                  <div class="col-sm-5">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" routerLink="/vendor_registration_upload_doc">Save & Next</button>
+                      </div>
+                  </div>
+                 
+                </div>
+              </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+
+
+

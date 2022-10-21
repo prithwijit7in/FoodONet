@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "website": {
+    "foodonet": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -23,22 +23,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
                 }
               ],
               "fileReplacements": [
@@ -64,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "website:build:production"
+              "browserTarget": "foodonet:build:production"
             },
             "development": {
-              "browserTarget": "website:build:development"
+              "browserTarget": "foodonet:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "website:build"
+            "browserTarget": "foodonet:build"
           }
         },
         "test": {
@@ -94,11 +98,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
   "cli": {
-    "analytics": "9e2297f0-a24f-4c5d-9dc3-d5ed5efcac0e"
+    "analytics": false
   }
 }

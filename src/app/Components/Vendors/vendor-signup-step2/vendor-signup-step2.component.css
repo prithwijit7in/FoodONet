@@ -1,0 +1,91 @@
+.form-label{    
+    font-size: 18px;
+    color: #00b3a0;
+    line-height: 20px;
+    font-weight: normal;
+}
+.forgot_link a{
+    color: #00b3a0;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.forgot_link a:hover{
+    text-decoration: underline;
+}
+.ttw_button_container {
+    background: #27d9b4;
+    padding: 4px;
+    margin: 4px 0;
+    display: inline-block;
+    border-radius:30px;
+}
+button.ttw_button{  
+    background: #27d9b4;
+    color: #fff;
+    border: 1px solid white;
+    padding: 6px 52px;
+    font-weight: bold;      
+    font-size: 19px;
+    display: inline-block;
+    border-radius:30px;
+}
+.form-level-green{
+    color: #00b3a0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.progressbar {
+    counter-reset: step;
+    padding: 0;
+    margin: 0;
+  }
+  .progressbar li {
+    list-style: none;
+    display: inline-block;
+    width: 30.33%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    color:#00b3a0;
+  }
+  .progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height : 30px;
+    border: 1px solid #00b3a0;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #fff;
+    color:#00b3a0;
+  }
+  .progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 83%;
+    height: 1px;
+    background-color: #ddd;
+    top: 15px;
+    left: -41%;
+    z-index : 0;
+  }
+  .progressbar li:first-child:after {
+    content: none;
+  }
+  .progressbar li.active {
+    color: #00b3a0;
+    font-weight: 500;
+  }
+  .progressbar li.active:before {
+    border-color:#00b3a0;
+    background:#00b3a0;
+    color:#fff;
+  } 
+  .progressbar li.active + li:after {
+    background-color: #00b3a0;
+  }

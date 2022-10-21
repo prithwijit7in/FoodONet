@@ -1,0 +1,21 @@
+.top-left{ float:left;}
+.top-right{ float:right;}
+.top-right .fa{font-size: 20px;}
+.bg-header{ background: #00b3a0; color: #fff;}
+.logo_header{width: 25%;padding: 1% 0%;}
+.top-right a{ color: #fff; text-decoration: none;}
+.top-right a:hover{ text-decoration: underline;}
+.login-dropdown{
+    width: 11%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    z-index: 999;
+    right: 3%;
+    padding: 10px;
+    top: 40px;
+}
+.login-dropdown ul{ padding: 0px; margin: 0px;}
+.login-dropdown ul li{ list-style: none;color: #00b3a0; }
+.login-dropdown ul li a{color: #00b3a0; text-decoration: none;}
+.login-dropdown ul li a:hover{ text-decoration: underline;}

@@ -1,0 +1,87 @@
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+          <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">Vendor Registration</h2>
+              <ul class="progressbar text-center mb-5">
+                <li class="active">Contact Details</li>
+                <li class="active">Legal Information</li>
+                <li class="active">Bank Details</li>
+                <li class="active">Document Upload</li>
+              </ul>
+              <h6 class="mb-3 text-center text-danger">Upload Documents with PDF/JPEG Format only (Max Limit 2MB)</h6>
+              
+              <div class="super_admin_login">
+
+                <div class="mb-3 row">
+                    <label for="certificate" class="col-sm-8 col-form-label form-label">Partnership Deed / Certificate Of Incorporation</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="file" multiple id="certificate">
+                    </div>
+                    
+                </div> 
+                <div class="mb-3 row">
+                    <label for="fssai" class="col-sm-2 col-form-label form-label">PAN Card<sup class="text-danger">*</sup></label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="file" multiple id="pan_card">
+                    </div>
+                    <label for="fssai" class="col-sm-2 col-form-label form-label">GSTIN <sup class="text-danger">*</sup></label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="file" multiple id="gstin">
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="fssai" class="col-sm-2 col-form-label form-label">FSSAI Licence<sup class="text-danger">*</sup></label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="file" multiple id="fssai">
+                    </div>
+                    <label for="fssai" class="col-sm-2 col-form-label form-label">Trade License<sup class="text-danger">*</sup></label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="file" multiple id="gstin">
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="udyam" class="col-sm-2 col-form-label form-label">UDYAM</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="file" multiple id="udyam">
+                    </div>
+                    <label for="chaque" class="col-sm-2 col-form-label form-label">Cancelled Chaque<sup class="text-danger">*</sup></label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="file" multiple id="Chaque">
+                    </div>
+                </div> 
+                
+               
+
+                <div class="mb-3 row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3">
+                        <div class="ttw_button_container">
+                            <button class="ttw_button" type="submit" routerLink="/vendor_registration_bankdetails" >Back</button>
+                        </div>
+                    </div>
+                 
+                  <div class="col-sm-7">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" routerLink="/vendor_registration_complete">Save & Complete</button>
+                      </div>
+                  </div>
+                 
+                </div>
+              </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+
+
+
+

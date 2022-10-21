@@ -1,0 +1,84 @@
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-7">
+          <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-3 text-center">Vendor Sign Up</h2>
+              <ul class="progressbar text-center mb-5">
+                <li class="active">Organization Details</li>
+                <li class="active">User Details</li>
+                <li>Profile Created</li>
+                
+              </ul>
+              
+              <div class="super_admin_login">
+                <div class="mb-3 row">
+                  <label for="f_name" class="col-sm-4 col-form-label form-label">First Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="first_name" >
+                  </div>
+                </div>
+               
+                <div class="mb-3 row">
+                    <label for="last_name" class="col-sm-4 col-form-label form-label">Last Name</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="last_name" >
+                    </div>
+                </div>  
+                
+                <div class="mb-3 row">
+                    <label for="email_id" class="col-sm-4 col-form-label form-label">Email Id </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="vendor_email" >
+                    </div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Verify</button></div>
+                    
+                   
+                </div> 
+                <div class="mb-3 row">
+                    <label for="email_verification_code" class="col-sm-4 col-form-label form-label">Verfication Code</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="email_verification_code" >
+                    </div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Submit</button></div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Resend</button></div>
+                    
+                    
+                    
+                </div> 
+                <div class="mb-3 row">
+                    <label for="mobile_no" class="col-sm-4 col-form-label form-label">Mobile No</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="mob_no" >
+                    </div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Verify</button></div>
+                </div> 
+                <div class="mb-5 row">
+                    <label for="mobile_no_verification" class="col-sm-4 col-form-label form-label">Verification Code</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="mob_no_verification" >
+                    </div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Submit</button></div>
+                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Resend</button></div>
+                </div>
+                  
+                <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label form-label"></label>
+                  <div class="col-sm-5">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" routerLink="/vendor_signup_complete">Sign Up</button>
+                      </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+
