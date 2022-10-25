@@ -1,0 +1,158 @@
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <nav class='animated bounceInDown bg-blue'>
+                <ul>
+                    <li><a routerLink="/">Dashboard</a></li>
+                    
+                    <li class='sub-menu'><a>Product<div class='fa fa-caret-down right'></div></a>
+                        <ul>
+                            <li><a routerLink="/vendor_add_product" class="active_menu">Add Product</a></li>
+                            <li><a routerLink="/vendor_product_list">Product List</a></li>
+                            <li><a routerLink="/vendor_product_inventory">Product Inventory</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+
+
+
+
+        </div>
+        <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+          <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">Add New Products</h2>
+             
+              <h6 class="mb-3 text-center text-danger">(All Fields Are Mandatory)</h6>
+              
+              <div class="super_admin_login">
+                <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-3 col-form-label form-label">Product Category</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Select Product Category</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-3 col-form-label form-label">Product Sub Category</label>
+                    <div class="col-sm-9">
+                      <select class="form-select" aria-label="Default select example">
+                          <option selected>Select Product Sub Category</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Product Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="vendor_product" >
+                    </div>
+                </div>  
+                
+              
+                <div class="mb-3 row">
+                    <label for="GST" class="col-sm-3 col-form-label form-label">Product Price<br/>(Incl. GST)</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" id="Product_price" >
+                    </div>
+                    <label for="GST" class="col-sm-4 col-form-label form-label">FoodONet Commission (Rs)</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="commission" >
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="city" class="col-sm-3 col-form-label form-label">Display Price<br/>(Incl. GST)</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" id="display_price" >
+                    </div>
+                   
+                </div> 
+                <div class="d-flex justify-content-center align-items-center">
+                    
+                    <div class="col-sm-4">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit">Add Product</button>
+                      </div>
+                  </div>
+                  </div>
+               
+                
+                <h5 class="mb-5 mt-5 text-center"><span class="border-bottom border-3 border-success">Product Details</span></h5>
+                
+                <div class="mb-3 row">
+                    <table class="table table-bordered table-responsive">
+                        <thead class="bg-blue">
+                          <tr>
+                            <th scope="col">SL No.</th>
+                            <th scope="col">Code</th>
+                            <th scope="col">Product Category</th>
+                            <th scope="col">Product Sub Category</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Vendor's Price(Incl. GST)</th>
+                            <th scope="col">FoodONet(Incl. SST)</th>
+                            <th scope="col">Display Price(Incl. GST)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                 
+                  <div class="col-sm-3">
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit">Save</button>
+                    </div>
+                </div>
+                  <div class="col-sm-3">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" >Submit</button>
+                      </div>
+                  </div>
+                 
+                </div>
+              </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+
+

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import * as $ from 'jquery';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,9 @@ import { VendorSignupLegalInfoComponent } from './Components/Vendors/vendor-sign
 import { VendorSignupBankDetailsComponent } from './Components/Vendors/vendor-signup-bank-details/vendor-signup-bank-details.component';
 import { VendorSignupDocumentUploadComponent } from './Components/Vendors/vendor-signup-document-upload/vendor-signup-document-upload.component';
 import { VendorRegistrationCompleteComponent } from './Components/Vendors/vendor-registration-complete/vendor-registration-complete.component';
+import { VendorAddProductComponent } from './Components/Vendors/vendor-add-product/vendor-add-product.component';
+import { VendorProductListComponent } from './Components/Vendors/vendor-product-list/vendor-product-list.component';
+import { VendorProductInventoryComponent } from './Components/Vendors/vendor-product-inventory/vendor-product-inventory.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,10 @@ import { VendorRegistrationCompleteComponent } from './Components/Vendors/vendor
     VendorSignupLegalInfoComponent,
     VendorSignupBankDetailsComponent,
     VendorSignupDocumentUploadComponent,
-    VendorRegistrationCompleteComponent
+    VendorRegistrationCompleteComponent,
+    VendorAddProductComponent,
+    VendorProductListComponent,
+    VendorProductInventoryComponent
   ],
   imports: [
     BrowserModule,

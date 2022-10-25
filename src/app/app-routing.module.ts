@@ -5,7 +5,10 @@ import { ForgotPasswordComponent } from './Components/forgot-password/forgot-pas
 import { LoginSecurityCodeComponent } from './Components/login-security-code/login-security-code.component';
 import { ResetPasswordOtpComponent } from './Components/reset-password-otp/reset-password-otp.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { VendorAddProductComponent } from './Components/Vendors/vendor-add-product/vendor-add-product.component';
 import { VendorLoginComponent } from './Components/Vendors/vendor-login/vendor-login.component';
+import { VendorProductInventoryComponent } from './Components/Vendors/vendor-product-inventory/vendor-product-inventory.component';
+import { VendorProductListComponent } from './Components/Vendors/vendor-product-list/vendor-product-list.component';
 import { VendorRegistrationCompleteComponent } from './Components/Vendors/vendor-registration-complete/vendor-registration-complete.component';
 import { VendorServiceAvailibilityComponent } from './Components/Vendors/vendor-service-availibility/vendor-service-availibility.component';
 import { VendorSignupBankDetailsComponent } from './Components/Vendors/vendor-signup-bank-details/vendor-signup-bank-details.component';
@@ -15,6 +18,7 @@ import { VendorSignupDocumentUploadComponent } from './Components/Vendors/vendor
 import { VendorSignupLegalInfoComponent } from './Components/Vendors/vendor-signup-legal-info/vendor-signup-legal-info.component';
 import { VendorSignupStep1Component } from './Components/Vendors/vendor-signup-step1/vendor-signup-step1.component';
 import { VendorSignupStep2Component } from './Components/Vendors/vendor-signup-step2/vendor-signup-step2.component';
+
 
 const routes: Routes = [
   { path: '', component: AdminLoginComponent },
@@ -32,6 +36,9 @@ const routes: Routes = [
   { path: 'vendor_registration_bankdetails', component: VendorSignupBankDetailsComponent },
   { path: 'vendor_registration_upload_doc', component: VendorSignupDocumentUploadComponent },
   { path: 'vendor_registration_complete', component: VendorRegistrationCompleteComponent },
+  { path: 'vendor_add_product', component: VendorAddProductComponent},
+  { path: 'vendor_product_list', component: VendorProductListComponent},
+  { path: 'vendor_product_inventory', component: VendorProductInventoryComponent},
   
 ];
 
