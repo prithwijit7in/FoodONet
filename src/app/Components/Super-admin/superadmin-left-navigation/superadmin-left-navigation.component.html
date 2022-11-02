@@ -1,0 +1,28 @@
+<nav class='animated bounceInDown bg-blue'>
+    <ul>
+        <li><a routerLink="/superadmin_dashboard" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Dashboard</a></li>
+        <li class='sub-menu'><a><i class="fa fa-user" aria-hidden="true"></i>&nbsp;My Profile<div class='fa fa-caret-down right'></div></a>
+          <ul>
+              <li><a routerLink="/superadmin_profile"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;View Profile</a></li>
+              <li><a routerLink="/superadmin_edit_profile" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Update Profile</a></li>
+          </ul>
+        </li>
+        
+        <li class='sub-menu'><a><i class="fa fa-users" aria-hidden="true"></i>&nbsp;User Management<div class='fa fa-caret-down right'></div></a>
+            <ul>
+
+                <li><a routerLink="/superadmin_add_user" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-cart-plus" aria-hidden="true"></i>&nbsp;Add New User</a></li>
+                <li><a routerLink="/superadmin_view_edit_user" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-pencil-square" aria-hidden="true"></i>&nbsp;View/Modify User</a></li>
+            </ul>
+        </li>
+        <li><a routerLink="/superadmin_product_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Product Management</a></li>
+        <li><a routerLink="/superadmin_consumer_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Consumer Management</a></li>
+        <li><a routerLink="/superadmin_financial_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;Financial Management</a></li>
+        <li><a routerLink="/superadmin_pending_authorisation" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-universal-access" aria-hidden="true"></i>&nbsp;Pending Authorisation</a></li>
+        <li><a routerLink="/superadmin_vendor_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Vendor Management</a></li> 
+        <li><a routerLink="/superadmin_resturent_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-cutlery" aria-hidden="true"></i>&nbsp;Resturant Management</a></li>
+        <li><a routerLink="/superadmin_reseller_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-exchange" aria-hidden="true"></i>&nbsp;Reseller Management</a></li>
+        <li><a routerLink="/superadmin_business_analytics" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-area-chart" aria-hidden="true"></i>&nbsp;Business Analytics</a></li>
+    </ul>
+</nav>
+

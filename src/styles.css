@@ -1,2 +1,8 @@
 a{ cursor: pointer;}
 h1,h2,h3,h4,h5,h6{color:#00b3a0;}
+.table>thead {
+    vertical-align: bottom;
+    background: #00b3a0;
+    color: #fff;
+    }
+    .table>thead th{vertical-align: top;}

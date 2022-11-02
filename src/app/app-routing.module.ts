@@ -5,7 +5,13 @@ import { ForgotPasswordComponent } from './Components/forgot-password/forgot-pas
 import { LoginSecurityCodeComponent } from './Components/login-security-code/login-security-code.component';
 import { ResetPasswordOtpComponent } from './Components/reset-password-otp/reset-password-otp.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { SuperadminAddUserComponent } from './Components/Super-admin/superadmin-add-user/superadmin-add-user.component';
+import { SuperadminDashboardComponent } from './Components/Super-admin/superadmin-dashboard/superadmin-dashboard.component';
+import { SuperadminEditUserComponent } from './Components/Super-admin/superadmin-edit-user/superadmin-edit-user.component';
+import { SuperadminResetUserPasswordComponent } from './Components/Super-admin/superadmin-reset-user-password/superadmin-reset-user-password.component';
+import { SuperadminViewUserComponent } from './Components/Super-admin/superadmin-view-user/superadmin-view-user.component';
 import { VendorAddProductComponent } from './Components/Vendors/vendor-add-product/vendor-add-product.component';
+import { VendorDashboardComponent } from './Components/Vendors/vendor-dashboard/vendor-dashboard.component';
 import { VendorLoginComponent } from './Components/Vendors/vendor-login/vendor-login.component';
 import { VendorProductInventoryComponent } from './Components/Vendors/vendor-product-inventory/vendor-product-inventory.component';
 import { VendorProductListComponent } from './Components/Vendors/vendor-product-list/vendor-product-list.component';
@@ -39,6 +45,12 @@ const routes: Routes = [
   { path: 'vendor_add_product', component: VendorAddProductComponent},
   { path: 'vendor_product_list', component: VendorProductListComponent},
   { path: 'vendor_product_inventory', component: VendorProductInventoryComponent},
+  { path: 'vendor_dashboard', component: VendorDashboardComponent},
+  { path: 'superadmin_dashboard', component: SuperadminDashboardComponent},
+  { path: 'superadmin_add_user', component: SuperadminAddUserComponent},
+  { path: 'superadmin_view_edit_user', component: SuperadminViewUserComponent},
+  { path: 'superadmin_edit_user', component: SuperadminEditUserComponent},
+  { path: 'superadmin_reset_user_password', component: SuperadminResetUserPasswordComponent},
   
 ];
 

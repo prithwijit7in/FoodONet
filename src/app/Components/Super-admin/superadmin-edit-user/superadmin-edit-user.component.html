@@ -1,0 +1,172 @@
+
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <app-superadmin-left-navigation></app-superadmin-left-navigation>   
+        </div>
+        <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+          <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">Modify / Edit User</h2>
+             
+              <h6 class="mb-3 text-center text-danger">(All Fields Are Mandatory)</h6>
+              
+              <div class="super_admin_login">
+                
+                <div class="mb-3 row">
+                 <div class="col-md-8">  
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Emp Code</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="admin_emp_code" value="123456" disabled >
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-3 col-form-label form-label">First Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="admin_first_name" value="Demo">
+                    </div>
+                </div>  
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Last Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="admin_last_name" value="Demo">
+                    </div>
+                </div>   
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Email ID</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" id="admin_email" value="demo@gmail.com" >
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Mobile No.</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="admin_mobile_no" value="123232456">
+                    </div>
+                </div> 
+                 </div> 
+                 <div class="col-md-4 text-center">
+                    <label for="upload-image" class="col-sm-12 col-form-label form-label text-center">Upload Profile Image</label>
+                    <div class="mb-3 text-center"><img [src]="url" width="125" height="" alt="img"></div>
+                    
+                    <div class="mb-3 text-center"><input type="file" accept="image/png, image/gif, image/jpeg" (change)="selectFile($event)"></div>
+                    
+                    
+                 </div>
+                </div>
+                
+              
+                <div class="mb-3 row">
+                    <label for="pan_admin" class="col-sm-2 col-form-label form-label">PAN No.</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="pan_admin" value="AQGPD7865">
+                    </div>
+                    <label for="adhar_no" class="col-sm-2 col-form-label form-label">ADHAR No.</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="adhar_admin" value="123456">
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Address 1</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="admin_address1" value="Demo Address" >
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Address 2</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="admin_address2" value="Demo Address">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="pan_admin" class="col-sm-2 col-form-label form-label">Police Stn.</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="admin_ps" value="Demo Address">
+                    </div>
+                    <label for="adhar_no" class="col-sm-2 col-form-label form-label">Post Office</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="admin_po" value="Demo Address">
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="pan_admin" class="col-sm-2 col-form-label form-label">City</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="admin_city" value="Demo Address">
+                    </div>
+                    <label for="adhar_no" class="col-sm-2 col-form-label form-label">District</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="admin_district" value="Demo Address">
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="pan_admin" class="col-sm-2 col-form-label form-label">State</label>
+                    <div class="col-sm-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select State</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <label for="adhar_no" class="col-sm-2 col-form-label form-label">Pincode</label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" id="admin_pincode" value="1232321">
+                    </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="pan_admin" class="col-sm-2 col-form-label form-label">Country</label>
+                    <div class="col-sm-10">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Country</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    
+                </div> 
+                
+              
+                <div class="d-flex justify-content-center align-items-center row">
+                    <label for="pan_admin" class="col-sm-2 col-form-label form-label"></label>
+     
+                  <div class="col-sm-3">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" >Update</button>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit" >Delete</button>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit" routerLink="/superadmin_view_edit_user">Exit</button>
+                    </div>
+                </div>
+                 
+                </div>
+              </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+

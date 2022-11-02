@@ -1,0 +1,122 @@
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <app-superadmin-left-navigation></app-superadmin-left-navigation> 
+        </div>
+        <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+          <div class="card shadow-2-strong" style="background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">View / Update Users</h2>
+        
+               
+               
+
+
+                <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-3 col-form-label form-label">Search By</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Select User Type</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Vendor</option>
+                       
+                    </select>
+                  </div>
+                </div> 
+                
+                <div class="super_admin_login">
+                    <div class="mb-3 row">
+                        <label for="trade_no" class="col-sm-3 col-form-label form-label">Name / Emp Code</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="emp_code" >
+                        </div>
+                    </div> 
+                 
+                
+              
+               
+                <div class="d-flex justify-content-center align-items-center">
+                    
+                    <div class="col-sm-3">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit">Search</button>
+                      </div>
+                  </div>
+                  </div>
+               
+                
+                <h5 class="mb-5 mt-5 text-center"><span class="border-bottom border-3 border-success">Users List</span></h5>
+                
+                <div class="mb-3 row table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="bg-blue">
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Emp Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">User Type</th>
+                            <th scope="col">Email ID</th>
+                            <th scope="col">Mobile NO</th>
+                           
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                                <input class="form-check-input" name="edit-user" type="radio" value="" id="flexCheckDefault">
+                              </th>
+                            <td>PD1232323</td>
+                            <td>Otto</td>
+                            <td>Admin</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567898</td>
+                           
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                                <input class="form-check-input" name="edit-user" type="radio" value="" id="flexCheckDefault">
+                              </th>
+                            <td>PD1232323</td>
+                            <td>Food Lovers</td>
+                            <td>Vendor</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567898</td>
+                            
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                 
+                  
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit" (click)="redirectToedituser()">View/Edit</button>
+                    </div>
+                
+                  &nbsp;
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" routerLink="/superadmin_reset_user_password">Reset Password</button>
+                      </div>
+                  
+                 
+                </div>
+              </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+
+
+
+
+

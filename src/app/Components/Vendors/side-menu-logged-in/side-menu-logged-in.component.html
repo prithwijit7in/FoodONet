@@ -1,0 +1,23 @@
+<nav class='animated bounceInDown bg-blue'>
+    <ul>
+        <li><a routerLink="/vendor_dashboard" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Dashboard</a></li>
+        <li class='sub-menu'><a><i class="fa fa-user" aria-hidden="true"></i>&nbsp;My Profile<div class='fa fa-caret-down right'></div></a>
+          <ul>
+              <li><a routerLink="/vendor_profile"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;View Profile</a></li>
+              <li><a routerLink="/vendor_edit_profile" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Update Profile</a></li>
+          </ul>
+      </li>
+        
+        <li class='sub-menu'><a><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Product<div class='fa fa-caret-down right'></div></a>
+            <ul>
+                <li><a routerLink="/vendor_product_list" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list" aria-hidden="true" ></i>&nbsp;View Your Product List</a></li>
+                <li><a routerLink="/vendor_add_product" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-cart-plus" aria-hidden="true"></i>&nbsp;Add New Product</a></li>
+                <li><a routerLink="/vendor_product_inventory" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-pencil-square" aria-hidden="true"></i>&nbsp;View/Update Inventory</a></li>
+            </ul>
+        </li>
+        <li><a routerLink="/vendor_profile"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Report</a></li>
+        <li><a routerLink="/raise_complain"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Raise A Complain</a></li>
+        
+        
+    </ul>
+</nav>

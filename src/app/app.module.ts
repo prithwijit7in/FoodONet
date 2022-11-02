@@ -25,6 +25,14 @@ import { VendorRegistrationCompleteComponent } from './Components/Vendors/vendor
 import { VendorAddProductComponent } from './Components/Vendors/vendor-add-product/vendor-add-product.component';
 import { VendorProductListComponent } from './Components/Vendors/vendor-product-list/vendor-product-list.component';
 import { VendorProductInventoryComponent } from './Components/Vendors/vendor-product-inventory/vendor-product-inventory.component';
+import { SideMenuLoggedInComponent } from './Components/Vendors/side-menu-logged-in/side-menu-logged-in.component';
+import { VendorDashboardComponent } from './Components/Vendors/vendor-dashboard/vendor-dashboard.component';
+import { SuperadminDashboardComponent } from './Components/Super-admin/superadmin-dashboard/superadmin-dashboard.component';
+import { SuperadminLeftNavigationComponent } from './Components/Super-admin/superadmin-left-navigation/superadmin-left-navigation.component';
+import { SuperadminAddUserComponent } from './Components/Super-admin/superadmin-add-user/superadmin-add-user.component';
+import { SuperadminViewUserComponent } from './Components/Super-admin/superadmin-view-user/superadmin-view-user.component';
+import { SuperadminEditUserComponent } from './Components/Super-admin/superadmin-edit-user/superadmin-edit-user.component';
+import { SuperadminResetUserPasswordComponent } from './Components/Super-admin/superadmin-reset-user-password/superadmin-reset-user-password.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +56,15 @@ import { VendorProductInventoryComponent } from './Components/Vendors/vendor-pro
     VendorRegistrationCompleteComponent,
     VendorAddProductComponent,
     VendorProductListComponent,
-    VendorProductInventoryComponent
+    VendorProductInventoryComponent,
+    SideMenuLoggedInComponent,
+    VendorDashboardComponent,
+    SuperadminDashboardComponent,
+    SuperadminLeftNavigationComponent,
+    SuperadminAddUserComponent,
+    SuperadminViewUserComponent,
+    SuperadminEditUserComponent,
+    SuperadminResetUserPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -2,24 +2,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-12 col-md-3 col-lg-3 col-xl-3">
-            <nav class='animated bounceInDown bg-blue'>
-                <ul>
-                    <li><a routerLink="/">Dashboard</a></li>
-                    
-                    <li class='sub-menu'><a>Product<div class='fa fa-caret-down right'></div></a>
-                        <ul>
-                            <li><a routerLink="/vendor_add_product" >Add Product</a></li>
-                            <li><a routerLink="/vendor_product_list" class="active_menu">Product List</a></li>
-                            <li><a routerLink="/vendor_product_inventory">Product Inventory</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </nav>
-
-
-
-
+          <app-side-menu-logged-in></app-side-menu-logged-in> 
         </div>
         <div class="col-12 col-md-9 col-lg-9 col-xl-9">
           <div class="card shadow-2-strong" style="background-color:#f8f9fa;">
