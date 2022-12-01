@@ -33,6 +33,12 @@ import { SuperadminAddUserComponent } from './Components/Super-admin/superadmin-
 import { SuperadminViewUserComponent } from './Components/Super-admin/superadmin-view-user/superadmin-view-user.component';
 import { SuperadminEditUserComponent } from './Components/Super-admin/superadmin-edit-user/superadmin-edit-user.component';
 import { SuperadminResetUserPasswordComponent } from './Components/Super-admin/superadmin-reset-user-password/superadmin-reset-user-password.component';
+import { PendingAuthorizationComponent } from './Components/Super-admin/pending-authorization/pending-authorization.component';
+import { SuperadminVendorListComponent } from './Components/Super-admin/superadmin-vendor-list/superadmin-vendor-list.component';
+import { SuperadminSearchVendorComponent } from './Components/Super-admin/superadmin-search-vendor/superadmin-search-vendor.component';
+import { SuperadminVendorDetailsComponent } from './Components/Super-admin/superadmin-vendor-details/superadmin-vendor-details.component';
+import { SuperadminVendorProductListComponent } from './Components/Super-admin/superadmin-vendor-product-list/superadmin-vendor-product-list.component';
+
 
 @NgModule({
   declarations: [
@@ -64,7 +70,13 @@ import { SuperadminResetUserPasswordComponent } from './Components/Super-admin/s
     SuperadminAddUserComponent,
     SuperadminViewUserComponent,
     SuperadminEditUserComponent,
-    SuperadminResetUserPasswordComponent
+    SuperadminResetUserPasswordComponent,
+    PendingAuthorizationComponent,
+    SuperadminVendorListComponent,
+    SuperadminSearchVendorComponent,
+    SuperadminVendorDetailsComponent,
+    SuperadminVendorProductListComponent,
+
   ],
   imports: [
     BrowserModule,

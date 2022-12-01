@@ -1,0 +1,92 @@
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <app-superadmin-left-navigation></app-superadmin-left-navigation> 
+        </div>
+        <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+          <div class="card shadow-2-strong" style="background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">Pending Authorization</h2>
+        
+               
+               
+
+
+                
+                
+                <div class="super_admin_login">
+                    
+               
+                
+            
+                <div class="alert alert-danger" role="alert">
+                   Total 100 Authorizations are pending
+                  </div>
+                <div class="mb-3 table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="bg-blue">
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Service No.</th>
+                            <th scope="col">Request Type</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Request</th>
+                           
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                                <input class="form-check-input" name="edit-user" type="checkbox" value="" id="flexCheckDefault">
+                              </th>
+                            <td>PD1232323</td>
+                            <td>Vendor</td>
+                            <td>14/11/200</td>
+                            <td>22:30</td>
+                            <td>Vendor authorization</td>
+                           
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                                <input class="form-check-input" name="edit-user" type="checkbox" value="" id="flexCheckDefault">
+                              </th>
+                              <td>PD1232313</td>
+                              <td>Vendor</td>
+                              <td>14/11/200</td>
+                              <td>22:30</td>
+                              <td>Vendor authorization</td>
+                            
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                 
+                  
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit" >Authorize</button>
+                    </div>
+                
+                  &nbsp;
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" >Decline</button>
+                      </div>
+                  
+                 
+                </div>
+              </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>

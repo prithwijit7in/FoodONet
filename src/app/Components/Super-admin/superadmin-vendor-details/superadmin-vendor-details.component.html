@@ -1,0 +1,92 @@
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <app-superadmin-left-navigation></app-superadmin-left-navigation> 
+        </div>
+        <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+          <div class="card shadow-2-strong" style="background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">Vendor Profile</h2>
+        
+              <div class="super_admin_login">
+                <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label form-label">Vendor Name :</label>
+                  <div class="col-sm-8">
+                    <p class="text-secondary my-1">Rahul Enterprise</p>
+                  </div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label form-label">Vendor Type :</label>
+                    <div class="col-sm-8">
+                        <p class="text-secondary my-1">Retailers</p>
+                    </div>
+                  </div>
+                
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-4 col-form-label form-label">PAN No :</label>
+                    <div class="col-sm-8">
+                        <p class="text-secondary my-1">AQGPD9098G</p>
+                    </div>
+                </div>  
+
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-4 col-form-label form-label">GSTIN :</label>
+                    <div class="col-sm-8">
+                        <p class="text-secondary my-1">19AHNGRFGTY78</p>
+                    </div>
+                </div> 
+                
+                <div class="mb-3 row">
+                    <label for="trade_no" class="col-sm-4 col-form-label form-label">FSSAI No :</label>
+                    <div class="col-sm-8">
+                        <p class="text-secondary my-1">13AHNGRFGTY68</p>
+                    </div>
+                </div> 
+
+                
+               
+                
+               
+                
+
+                
+                
+
+                <div class="d-flex justify-content-center align-items-center my-5">
+                 
+                    <button type="button" class="btn btn-outline-success btn-sm" routerLink="/vendor_registration_contact_details"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View / Update Profile</button>
+                    <button type="button" class="btn btn-outline-success mx-2 btn-sm" routerLink="/superadmin_vendor_product_list"><i class="fa fa-list-ul" aria-hidden="true"></i> View Product List</button>
+                    <button type="button" class="btn btn-outline-success btn-sm" routerLink="/vendor_add_product"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add Product</button>
+                    <button type="button" class="btn btn-outline-success mx-2 btn-sm" routerLink="/vendor_product_inventory"><i class="fa fa-indent" aria-hidden="true"></i> View/Update Inventory</button>
+                    <div class="btn-group"><button type="button" class="btn btn-outline-success btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-book" aria-hidden="true"></i> Reports</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Pending Order List</a></li>
+                        <li><a class="dropdown-item" href="#">Order List</a></li>
+                        <li><a class="dropdown-item" href="#">Invoices Raised</a></li>
+                        <li><a class="dropdown-item" href="#">Payment Sheet</a></li>
+                        <li><a class="dropdown-item" href="#">Complaints Raised</a></li>
+                    </ul>
+                    </div>
+
+                    
+                  
+
+                 
+                </div>
+              </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+
+
+
+
+

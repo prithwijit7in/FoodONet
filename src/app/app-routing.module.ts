@@ -5,10 +5,15 @@ import { ForgotPasswordComponent } from './Components/forgot-password/forgot-pas
 import { LoginSecurityCodeComponent } from './Components/login-security-code/login-security-code.component';
 import { ResetPasswordOtpComponent } from './Components/reset-password-otp/reset-password-otp.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { PendingAuthorizationComponent } from './Components/Super-admin/pending-authorization/pending-authorization.component';
 import { SuperadminAddUserComponent } from './Components/Super-admin/superadmin-add-user/superadmin-add-user.component';
 import { SuperadminDashboardComponent } from './Components/Super-admin/superadmin-dashboard/superadmin-dashboard.component';
 import { SuperadminEditUserComponent } from './Components/Super-admin/superadmin-edit-user/superadmin-edit-user.component';
 import { SuperadminResetUserPasswordComponent } from './Components/Super-admin/superadmin-reset-user-password/superadmin-reset-user-password.component';
+import { SuperadminSearchVendorComponent } from './Components/Super-admin/superadmin-search-vendor/superadmin-search-vendor.component';
+import { SuperadminVendorDetailsComponent } from './Components/Super-admin/superadmin-vendor-details/superadmin-vendor-details.component';
+import { SuperadminVendorListComponent } from './Components/Super-admin/superadmin-vendor-list/superadmin-vendor-list.component';
+import { SuperadminVendorProductListComponent } from './Components/Super-admin/superadmin-vendor-product-list/superadmin-vendor-product-list.component';
 import { SuperadminViewUserComponent } from './Components/Super-admin/superadmin-view-user/superadmin-view-user.component';
 import { VendorAddProductComponent } from './Components/Vendors/vendor-add-product/vendor-add-product.component';
 import { VendorDashboardComponent } from './Components/Vendors/vendor-dashboard/vendor-dashboard.component';
@@ -51,6 +56,11 @@ const routes: Routes = [
   { path: 'superadmin_view_edit_user', component: SuperadminViewUserComponent},
   { path: 'superadmin_edit_user', component: SuperadminEditUserComponent},
   { path: 'superadmin_reset_user_password', component: SuperadminResetUserPasswordComponent},
+  { path: 'superadmin_pending_authorization', component: PendingAuthorizationComponent},
+  { path: 'superadmin_vendor_list', component: SuperadminVendorListComponent},
+  { path: 'superadmin_search_vendor', component: SuperadminSearchVendorComponent},
+  { path: 'superadmin_vendor_details', component: SuperadminVendorDetailsComponent},
+  { path: 'superadmin_vendor_product_list', component: SuperadminVendorProductListComponent},
   
 ];
 
