@@ -30,8 +30,6 @@ button.ttw_button{
     display: inline-block;
     border-radius:30px;
 }
-
-button.ttw_button:disabled{opacity: 0.5;}
 .form-level-green{
     color: #00b3a0;
     font-size: 18px;
@@ -46,7 +44,7 @@ button.ttw_button:disabled{opacity: 0.5;}
   .progressbar li {
     list-style: none;
     display: inline-block;
-    width: 30.33%;
+    width: 25%;
     position: relative;
     text-align: center;
     cursor: pointer;
@@ -91,12 +89,4 @@ button.ttw_button:disabled{opacity: 0.5;}
   .progressbar li.active + li:after {
     background-color: #00b3a0;
   }
-  .signup_step2{display: none;}
-  .vendor_signup_error, .otp_success_msg, .otp_error_msg{display: none;}
-  .countdown{ font-size: 14px;color: #00b3a0; font-style: italic; font-weight: bold;}
-  .mob_valid_msg, .email_valid_msg{
-    font-size: 13px;
-    font-style: italic;
-    color: green;
-  }
- 
+

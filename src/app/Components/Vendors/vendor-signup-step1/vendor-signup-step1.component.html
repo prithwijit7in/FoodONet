@@ -11,62 +11,172 @@
                 <li>User Details</li>
                 <li>Profile Created</li>
               </ul>
-              
-              <div class="super_admin_login">
+              <form [formGroup]="vendorSignup1" (ngSubmit)="SubmitvenderSignup1()"> 
+                
+              <div class="super_admin_login signup_step1">
                 <div class="mb-3 row">
                   <label for="noo" class="col-sm-4 col-form-label form-label">Organization Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="name_of_org" >
+                    <input type="text" class="form-control" id="name_of_org" formControlName="org_name" [ngClass]="{ 'is-invalid': submitted && f.org_name.errors }">
+                    <div *ngIf="submitted && f.org_name.errors" class="invalid-feedback">
+                      <div *ngIf="f.org_name.errors.required">Field is required</div>
                   </div>
+                  </div>
+                  
                 </div>
                 <div class="mb-3 row">
                   <label for="inputPassword" class="col-sm-4 col-form-label form-label">Organization Type</label>
                   <div class="col-sm-8">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select Organization Type</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select id="org-typ" class="form-select" aria-label="Default select example" formControlName="org_type" [ngClass]="{ 'is-invalid': submitted && f.org_type.errors }">
+                        <option value="" selected disabled>Select Organization Type</option>
+                        <option value="Ownership">Ownership</option>
+                        <option value="Partnership">Partnership</option>
+                        <option value="Share">Share</option>
                     </select>
+                    <div *ngIf="submitted && f.org_type.errors" class="invalid-feedback">
+                      <div *ngIf="f.org_type.errors.required">Field is required</div>
                   </div>
+                  </div>
+                 
                 </div> 
                 <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-4 col-form-label form-label">Trade License No</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="trade_lic_no" >
+                      <input type="text" class="form-control" id="trade_lic_no"  formControlName="trade_license_no" [ngClass]="{ 'is-invalid': submitted && f.trade_license_no.errors }">
+                      <div *ngIf="submitted && f.trade_license_no.errors" class="invalid-feedback">
+                        <div *ngIf="f.trade_license_no.errors.required">Field is required</div>
+                      </div>
                     </div>
+                    
                 </div>  
                 
                 <div class="mb-3 row">
                     <label for="trade_authority" class="col-sm-4 col-form-label form-label">License Authority</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="trade_lcns_authority" >
+                      <input type="text" class="form-control" id="trade_lcns_authority" formControlName="license_auth" [ngClass]="{ 'is-invalid': submitted && f.license_auth.errors }">
+                      <div *ngIf="submitted && f.license_auth.errors" class="invalid-feedback">
+                        <div *ngIf="f.license_auth.errors.required">Field is required</div>
+                      </div>
                     </div>
+                    
                 </div> 
                 <div class="mb-3 row">
                     <label for="GST" class="col-sm-4 col-form-label form-label">GSTIN No</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="GSTIN" >
+                      <input type="text" class="form-control" id="GSTIN" formControlName="gstin_no" [ngClass]="{ 'is-invalid': submitted && f.gstin_no.errors }">
+                      <div *ngIf="submitted && f.gstin_no.errors" class="invalid-feedback">
+                        <div *ngIf="f.gstin_no.errors.required">Field is required</div>
+                      </div>
                     </div>
+                    
                 </div> 
                 <div class="mb-3 row">
                     <label for="fssai" class="col-sm-4 col-form-label form-label">FSSAI No</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" id="fssai" >
+                      <input type="text" class="form-control" id="fssai" formControlName="fssai_no" [ngClass]="{ 'is-invalid': submitted && f.fssai_no.errors }">
+                      <div *ngIf="submitted && f.fssai_no.errors" class="invalid-feedback">
+                        <div *ngIf="f.fssai_no.errors.required">Field is required</div>
+                      </div>
                     </div>
+                    
                 </div> 
                   
                 <div class="mb-3 row">
                   <label for="inputPassword" class="col-sm-4 col-form-label form-label"></label>
                   <div class="col-sm-5">
                       <div class="ttw_button_container">
-                          <button class="ttw_button" type="submit" routerLink="/vendor_signup_step2">Next</button>
+                          <button class="ttw_button signup_step1_nxt" type="button" disabled (click)="redirectTo()" >Next</button>
                       </div>
                   </div>
                  
                 </div>
               </div>
-           
+
+              <!---Step2 Form-->
+              <div class="super_admin_login signup_step2">
+                <div class="mb-3 row">
+                  <label for="f_name" class="col-sm-4 col-form-label form-label">Full Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="first_name" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <div *ngIf="f.name.errors.required">Name is required</div>
+                  </div>
+                  </div>
+                </div> 
+                
+                <div class="mb-3 row">
+                    <label for="email_id" class="col-sm-4 col-form-label form-label">Email Id </label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="vendor_email" formControlName="email" placeholder="Enter your Email Id"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                      </div>
+                    </div>
+                    
+                    
+                   
+                </div> 
+                <div class="mb-3 row">
+                    <label for="email_verification_code" class="col-sm-4 col-form-label form-label">Verfication Code</label>
+                    <div class="col-sm-5">
+                      <input type="text" (paste)="(false)"  (keypress)="restrictNumeric($event)" formControlName="email_otp" class="form-control email_verification" >
+                      <div class="email_valid_msg"></div>
+                    </div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary verify_otp otp_email" (click)="verifyEmailOtp()" disabled>Verify OTP</button></div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="mobile_no" class="col-sm-4 col-form-label form-label">Mobile No</label>
+                    <div class="col-sm-8">
+                      <input (paste)="(false)" type="text" (keypress)="restrictNumeric($event)"  id="mob_no" formControlName="mobile" placeholder="Enter your 10 digit Mobile no" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+                      <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                        <div *ngIf="f.mobile.errors.required">Mobile No is required</div>
+                        <div *ngIf="f.mobile.errors.minlength">Mobile No must be at least 10 digits</div>
+                    </div>
+                    </div>
+                    
+                </div> 
+                <div class="mb-3 row">
+                    <label for="mobile_no_verification" class="col-sm-4 col-form-label form-label">Verification Code</label>
+                    <div class="col-sm-5">
+                      <input type="text" (paste)="(false)"  (keypress)="restrictNumeric($event)" formControlName="mobile_otp"  class="form-control mob_verification" >
+                      <div class="mob_valid_msg"></div>
+                    </div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary verify_otp otp_mob" (click)="verifyMobOtp()" disabled>Verify OTP</button></div>
+                    
+                </div>
+
+                <div class="row mb-2">
+                  <label for="mobile_no_verification" class="col-sm-4 col-form-label form-label"></label>
+                  <div class="col-sm-8">
+                    <button type="button" class="btn btn-secondary snd-otp-btn" (click)="sendotp()">Send OTP at Mobile & Email</button>
+                    
+                  </div>
+                 
+                 
+              </div>
+              <div class="row mb-5">
+                <label for="mobile_no_verification" class="col-sm-4 col-form-label form-label"></label>
+                <div class="col-md-8 countdown"></div>
+              </div>
+              
+              
+                  
+                <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label form-label"></label>
+                  <div class="col-sm-5">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button signup_step2_nxt" type="submit" disabled>Sign Up</button>
+                      </div>
+                  </div>
+                 
+                </div>
+                <div class="alert alert-success otp_success_msg" role="alert"></div>
+               
+                <div class="alert alert-danger vendor_signup_error" role="alert"></div>
+                <div class="alert alert-danger otp_error_msg" role="alert"></div>
+              </div>
+              </form>
   
             </div>
           </div>

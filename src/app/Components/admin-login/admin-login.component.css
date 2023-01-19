@@ -126,4 +126,7 @@
         font-size: 20px;
         color: #00b3a0;
     }
+
+    #frgt_pass_admin, #frgt_pass_superadmin{display: none;}
+    .show_err{display: none;}
    

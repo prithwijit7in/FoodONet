@@ -1,4 +1,5 @@
 <section style="background-color: #fff;">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="container py-3 mt-2">
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-12 col-md-8 col-lg-8 col-xl-7">
@@ -8,53 +9,39 @@
               <h2 class="mb-5 text-center">Super Admin OR Admin Log in</h2>
               <div class="mb-3 row">
                 <label for="staticEmail" class="col-sm-3 col-form-label form-level-green">Log In As</label>
-                <div class="col-sm-7 mt-2 radio-level-green">
-                    <div class="custom_radio">
-                        <input type="radio" id="superadmin" name="admin" [(ngModel)]="admin" [value]="false" [checked]="!admin" checked ><label for="superadmin">Super Admin</label>
-                        
-                        <input type="radio" class="checked" id="admin" name="admin" [(ngModel)]="admin" [value]="true" [checked]="admin"><label for="admin">Admin</label>
-                       
-                      </div>
+                <div class="col-sm-4 mt-2 ">
+                  <select id="select_role" formControlName="role" class="form-select" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+                    <option value="">Select Your Role</option>
+                    <option value="superadmin">Super Admin</option>
+                    <option value="admin">Admin</option>
+                    
+                </select>
+                <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                    <div *ngIf="f.role.errors.required">Role is required</div>
+                </div>
                  
                 </div>
               </div>
-            <div class="super_admin_login" *ngIf="!admin">
-              <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-3 col-form-label form-label">User Id</label>
-                <div class="col-sm-9">
-                  <input type="email" class="form-control" id="username" >
-                </div>
-              </div>
-              <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-3 col-form-label form-label">Password</label>
-                <div class="col-sm-9">
-                  <input type="password" class="form-control" id="inputPassword">
-                </div>
-              </div>   
-                
-              <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-3 col-form-label form-label"></label>
-                <div class="col-sm-5">
-                    <div class="ttw_button_container">
-                        <button class="ttw_button" type="submit" routerLink="/superadmin_dashboard">SUBMIT</button>
-                    </div>
-                </div>
-                <div class="col-sm-3 forgot_link mt-3">
-                    <a routerLink="/forgot_password" routerLinkActive="active" ariaCurrentWhenActive="page">Forgot Password</a>
-                  </div>
-              </div>
-            </div>
-            <div class="admin_login" *ngIf="admin">
+            
+            <div class="admin_login" >
                 <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-3 col-form-label form-label">User Id</label>
+                    <label for="staticEmail" class="col-sm-3 col-form-label form-label">Email Id</label>
                     <div class="col-sm-9">
-                      <input type="email" class="form-control" id="username" >
+                      <input type="email" formControlName="email" placeholder="Enter your Email Id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" >
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
                     </div>
                   </div>
                   <div class="mb-3 row">
                     <label for="inputPassword" class="col-sm-3 col-form-label form-label">Password</label>
                     <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputPassword">
+                      <input type="password" formControlName="password" placeholder="Enter your Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
                     </div>
                   </div>   
                     
@@ -62,14 +49,17 @@
                     <label for="inputPassword" class="col-sm-3 col-form-label form-label"></label>
                     <div class="col-sm-5">
                         <div class="ttw_button_container">
-                            <button class="ttw_button" type="submit">SUBMIT</button>
+                            <button class="ttw_button" >SUBMIT</button>
                         </div>
                     </div>
                       <div class="col-sm-3 forgot_link mt-3">
-                        <a data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot Password</a>
+                        <a class="frgt_pass" id="frgt_pass_admin" data-bs-target="#exampleModal"  data-bs-toggle="modal" >Forgot Password</a>
+                        <a class="frgt_pass" id="frgt_pass_superadmin" (click)="redirectTo()">Forgot Password</a>
                       </div>
                   </div>
-                
+                  <div class="alert alert-danger show_err" role="alert"></div>
+                    
+                  
             </div>
   
             </div>
@@ -77,6 +67,11 @@
         </div>
       </div>
     </div>
+   
+    <!-- <div *ngIf="showErrorMessage">
+      <h1>Invalid username and password Please try again</h1>
+    </div> -->
+  </form>
   </section>
   <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

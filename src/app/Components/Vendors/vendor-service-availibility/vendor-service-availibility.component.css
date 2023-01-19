@@ -36,10 +36,11 @@ button.ttw_button{
     font-weight: 600;
 }
 .pincode-wrapper{
-    display:flex;
+    display:inline-block;
     justify-content: center;
+    text-align: center;
 }
-.pincode-wrapper input{width:45%;}
+.pincode-wrapper input{width:45%; margin: 0px auto;}
 .pincode-wrapper div{width:auto;}
 .pincode-input{
     text-align: center;
@@ -59,5 +60,6 @@ button.ttw_button{
     font-weight: 600;
 }
 
+.pincode_not_serviceable, .pincode_serviceable{display:none;}
 
 

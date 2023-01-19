@@ -1,6 +1,10 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import * as $ from 'jquery';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/authconfig.interceptor';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +42,9 @@ import { SuperadminVendorListComponent } from './Components/Super-admin/superadm
 import { SuperadminSearchVendorComponent } from './Components/Super-admin/superadmin-search-vendor/superadmin-search-vendor.component';
 import { SuperadminVendorDetailsComponent } from './Components/Super-admin/superadmin-vendor-details/superadmin-vendor-details.component';
 import { SuperadminVendorProductListComponent } from './Components/Super-admin/superadmin-vendor-product-list/superadmin-vendor-product-list.component';
+import { SuperadminSearchConsumerComponent } from './Components/Super-admin/superadmin-search-consumer/superadmin-search-consumer.component';
+import { SuperadminConsumerDetailsComponent } from './Components/Super-admin/superadmin-consumer-details/superadmin-consumer-details.component';
+import { SuperadminConsumerComplaintsDetailsComponent } from './Components/Super-admin/superadmin-consumer-complaints-details/superadmin-consumer-complaints-details.component';
 
 
 @NgModule({
@@ -76,14 +83,27 @@ import { SuperadminVendorProductListComponent } from './Components/Super-admin/s
     SuperadminSearchVendorComponent,
     SuperadminVendorDetailsComponent,
     SuperadminVendorProductListComponent,
+    SuperadminSearchConsumerComponent,
+    SuperadminConsumerDetailsComponent,
+    SuperadminConsumerComplaintsDetailsComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+     
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

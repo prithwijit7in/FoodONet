@@ -12,26 +12,26 @@
                 <li>Profile Created</li>
                 
               </ul>
-              
-              <div class="super_admin_login">
+              <form [formGroup]="vendorSignup2" (ngSubmit)="SubmitvenderSignup2()"> 
+              <div class="super_admin_login signup_step2">
                 <div class="mb-3 row">
-                  <label for="f_name" class="col-sm-4 col-form-label form-label">First Name</label>
+                  <label for="f_name" class="col-sm-4 col-form-label form-label">Full Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="first_name" >
+                    <input type="text" class="form-control" id="first_name" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <div *ngIf="f.name.errors.required">Name is required</div>
                   </div>
-                </div>
-               
-                <div class="mb-3 row">
-                    <label for="last_name" class="col-sm-4 col-form-label form-label">Last Name</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" id="last_name" >
-                    </div>
-                </div>  
+                  </div>
+                </div> 
                 
                 <div class="mb-3 row">
                     <label for="email_id" class="col-sm-4 col-form-label form-label">Email Id </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" id="vendor_email" >
+                      <input type="email" class="form-control" id="vendor_email" formControlName="email" placeholder="Enter your Email Id"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                      </div>
                     </div>
                     <div class="col-sm-2"><button type="button" class="btn btn-secondary">Verify</button></div>
                     
@@ -51,7 +51,11 @@
                 <div class="mb-3 row">
                     <label for="mobile_no" class="col-sm-4 col-form-label form-label">Mobile No</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" id="mob_no" >
+                      <input type="text" class="form-control" id="mob_no" formControlName="mobile" placeholder="Enter your 10 digit Mobile no" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+                      <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                        <div *ngIf="f.mobile.errors.required">Mobile No is required</div>
+                        <div *ngIf="f.mobile.errors.minlength">Mobile No must be at least 6 digits</div>
+                    </div>
                     </div>
                     <div class="col-sm-2"><button type="button" class="btn btn-secondary">Verify</button></div>
                 </div> 
@@ -68,12 +72,14 @@
                   <label for="inputPassword" class="col-sm-4 col-form-label form-label"></label>
                   <div class="col-sm-5">
                       <div class="ttw_button_container">
-                          <button class="ttw_button" type="submit" routerLink="/vendor_signup_complete">Sign Up</button>
+                          <button class="ttw_button" type="submit" >Sign Up</button>
                       </div>
                   </div>
                  
                 </div>
               </div>
+            </form>
+
             </div>
           </div>
         </div>

@@ -16,10 +16,16 @@
             </ul>
         </li>
         <li><a routerLink="/superadmin_product_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Product Management</a></li>
-        <li><a routerLink="/superadmin_consumer_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Consumer Management</a></li>
+        <li class='sub-menu'><a routerLink="/superadmin_consumer_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Consumer Management<div class='fa fa-caret-down right'></div></a>
+            <ul>
+                <li><a routerLink="/superadmin_search_consumer" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list-ol" aria-hidden="true"></i>&nbsp;Search Consumer</a></li>
+                <li><a routerLink="/superadmin_consumer_grievences" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Consumer Grievences</a></li>
+            </ul>
+        
+        </li>
         <li><a routerLink="/superadmin_financial_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;Financial Management</a></li>
         <li><a routerLink="/superadmin_pending_authorization" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-universal-access" aria-hidden="true"></i>&nbsp;Pending Authorisation</a></li>
-        <li><a><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Vendor Management</a>
+        <li class='sub-menu'><a><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Vendor Management<div class='fa fa-caret-down right'></div></a>
             <ul>
                 <li><a routerLink="/superadmin_vendor_list" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list-ol" aria-hidden="true"></i>&nbsp;List Of Vendors</a></li>
                 <li><a routerLink="/superadmin_search_vendor" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Search Vendors</a></li>
