@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./superadmin-add-user.component.css']
 })
 export class SuperadminAddUserComponent implements OnInit {
-  url="/assets/images/User-Profile.png"
+  url="assets/images/User-Profile.png"
 
   selectFile(event:any){
     if(event.target.files){
