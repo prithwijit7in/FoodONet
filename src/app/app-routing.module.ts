@@ -32,12 +32,13 @@ import { VendorSignupDocumentUploadComponent } from './Components/Vendors/vendor
 import { VendorSignupLegalInfoComponent } from './Components/Vendors/vendor-signup-legal-info/vendor-signup-legal-info.component';
 import { VendorSignupStep1Component } from './Components/Vendors/vendor-signup-step1/vendor-signup-step1.component';
 import { VendorSignupStep2Component } from './Components/Vendors/vendor-signup-step2/vendor-signup-step2.component';
+import { HomepageComponent } from './Frontend/homepage/homepage.component';
 import { AuthGuard } from './shared/auth.guard';
 
 
 const routes: Routes = [
-  {path:"", redirectTo:"login", pathMatch:"full"},
-  { path: 'login', component: AdminLoginComponent },
+  {path:"", redirectTo:"Homepage", pathMatch:"full"},
+  { path: 'admin', component: AdminLoginComponent },
   { path: 'forgot_password', component: ForgotPasswordComponent },
   { path: 'reset_password', component: ResetPasswordComponent },
   { path: 'enter_otp_reset_password', component: ResetPasswordOtpComponent },
@@ -69,6 +70,7 @@ const routes: Routes = [
   { path: 'superadmin_search_consumer', component: SuperadminSearchConsumerComponent},
   { path: 'superadmin_consumer_details', component: SuperadminConsumerDetailsComponent},
   { path: 'superadmin_consumer_complaint_details', component: SuperadminConsumerComplaintsDetailsComponent},
+  { path: 'Homepage', component: HomepageComponent },
 ];
 
 @NgModule({

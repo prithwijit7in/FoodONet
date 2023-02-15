@@ -40,6 +40,7 @@ export class VendorSignupStep1Component implements OnInit {
       mobile: ['', [Validators.required, Validators.minLength(10)]],
       email_otp: [''],
       mobile_otp: [''],
+      password:[''],
   });
 
   $('.email_verification, .mob_verification').prop('disabled', true);
@@ -116,18 +117,18 @@ export class VendorSignupStep1Component implements OnInit {
       this.res = res;
       console.log(this.res.success);
       if(this.res.success == true){
-        $('.overlay').hide();
+        $('.overlay, .vendor_signup_error').hide();
         $('.email_valid_msg').html('Email has been verified successfully.');
         $('.otp_email,.email_verification').prop('disabled', true);
-        
+        $('.signup_step2_nxt').prop('disabled', false);
       }
       
     },(handleError) => {
       $('.overlay').hide();
       this.handleError = handleError;
       console.log('Error List:' + this.handleError);
-     
-     
+      $('.signup_step2_nxt').prop('disabled', true);
+      $('.otp_email,.email_verification').prop('disabled', false);
     
     },
     () => console.log('OTP validation completed.')
@@ -143,22 +144,23 @@ export class VendorSignupStep1Component implements OnInit {
     MobOtp["role"] = this.vendorSignup1.value.role;
 
     console.log(MobOtp);
-    $('.overlay').show();
+    $('.overlay, .vendor_signup_error').show();
     this.authService.verifyMobOTP(MobOtp).subscribe((res) => {
     
       this.res = res;
       console.log(this.res.success);
       if(this.res.success == true){
-        $('.overlay').hide();
+        $('.overlay, .vendor_signup_error').hide();
         $('.mob_valid_msg').html('Mobile has been verified successfully.');
         $('.otp_mob,.mob_verification').prop('disabled', true);
+        $('.signup_step2_nxt').prop('disabled', false);
       }
     },(handleError) => {
       $('.overlay').hide();
       this.handleError = handleError;
       console.log('Error List:' + this.handleError);
-     
-     
+      $('.signup_step2_nxt').prop('disabled', true);
+      $('.otp_mob,.mob_verification').prop('disabled', false);
     
     },
     () => console.log('OTP validation completed.')
@@ -248,6 +250,7 @@ export class VendorSignupStep1Component implements OnInit {
     VendorSignup["gstin_no"] = this.vendorSignup1.value.gstin_no;
     VendorSignup["fssai_no"] = this.vendorSignup1.value.fssai_no;
     VendorSignup["name"] = this.vendorSignup1.value.name;
+    VendorSignup["password"] = this.vendorSignup1.value.password;
 
     
     console.log(VendorSignup);
@@ -261,7 +264,7 @@ export class VendorSignupStep1Component implements OnInit {
    //console.log(this.getPinCode.value.pin);
    this.vendorSignup1.value;
     // display form values on success
-  // alert('SUCCESS!! :-)\n\n' + JSON.stringify(VendorSignup, null, 4));
+  alert('SUCCESS!! :-)\n\n' + JSON.stringify(VendorSignup, null, 4));
    //this.authService.getPin(this.vendorSignup1.value.pin);
    //this.dataService.setFormData(this.vendorSignup1.value);
    $('.overlay').show();

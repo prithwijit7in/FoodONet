@@ -1,0 +1,21 @@
+footer{color:#fff; padding: 20px 0px; background: #000;}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: normal;
+    justify-content: space-between;
+}
+.footer_title{
+    color: #00b3a0;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+}
+.footer_menu_list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer_menu_list li{display: block;}
+.footer_menu_list li a{color: #fff; font-size: 14px; font-family: 'Open Sans', sans-serif;}
+.footer_menu_list li a:hover{text-decoration: underline;}

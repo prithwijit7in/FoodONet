@@ -103,6 +103,15 @@
                   </div>
                   </div>
                 </div> 
+                <div class="mb-3 row">
+                  <label for="f_name" class="col-sm-4 col-form-label form-label">Password</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Password is required</div>
+                  </div>
+                  </div>
+                </div> 
                 
                 <div class="mb-3 row">
                     <label for="email_id" class="col-sm-4 col-form-label form-label">Email Id </label>

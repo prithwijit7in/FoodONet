@@ -7,7 +7,7 @@
   
               <h2 class="mb-5 text-center">Vendor Sign In</h2>
               
-              
+              <form [formGroup]="vendorSignInOTP" (ngSubmit)="SubmitvendorSignInOTP()">
               <div class="super_admin_login">
                 <div class="mb-3 row">
                   <label for="vendor_userid" class="col-sm-4 col-form-label form-label">User Id</label>
@@ -32,7 +32,7 @@
                     </div>
                    
                 </div>
-
+                
                 <h3 class="mb-2 text-center">Or</h3>
                 <div class="mb-3 row">
                     <label for="email_id" class="col-sm-4 col-form-label form-label">Send OTP To</label>
@@ -55,39 +55,39 @@
                 <div *ngIf="!otp">
                 <div class="mb-3 row" >
                     <label for="email_id" class="col-sm-4 col-form-label form-label">Email Id </label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                       <input type="text" class="form-control" id="vendor_email" >
                     </div>
-                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Verify</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Send OTP</button></div>
    
                 </div> 
                 <div class="mb-3 row">
                     <label for="email_verification_code" class="col-sm-4 col-form-label form-label">Verfication Code</label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                       <input type="text" class="form-control" id="email_verification_code" >
                     </div>
                     
-                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Resend</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Verify</button></div>
     
                 </div> 
-            </div>
+                </div>
                 <div *ngIf="otp">
                 <div class="mb-3 row" >
                     <label for="mobile_no" class="col-sm-4 col-form-label form-label">Mobile No</label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                       <input type="text" class="form-control" id="mob_no" >
                     </div>
-                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Verify</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Send OTP</button></div>
                 </div> 
                 <div class="mb-3 row">
                     <label for="mobile_no_verification" class="col-sm-4 col-form-label form-label">Verification Code</label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-5">
                       <input type="text" class="form-control" id="mob_no_verification" >
                     </div>
                    
-                    <div class="col-sm-2"><button type="button" class="btn btn-secondary">Resend</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Verify</button></div>
                 </div>
-            </div> 
+                </div> 
                 <div class="mb-3 row">
                   <label for="inputPassword" class="col-sm-4 col-form-label form-label"></label>
                   <div class="col-sm-5">
@@ -97,9 +97,12 @@
                   </div>
                  
                 </div>
+              
+
                 <div class="mt-2 text-center">Dont you have any Account ? <a routerLink="/vendor_signup">Sign Up</a></div>
 
               </div>
+            </form>
             </div>
           </div>
         </div>

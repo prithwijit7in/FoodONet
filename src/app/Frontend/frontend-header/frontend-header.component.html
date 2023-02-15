@@ -1,0 +1,58 @@
+<div class="overlay"><div class="spinner"></div></div>
+<header class="navbar navbar-expand-lg bg-header">
+  <div class="container">
+    <div class="top-left no-padding">Customer Care: 1234567890 is available from 10am to 8pm for any queries, feedback or issues</div>
+    <div class="top-right" id="login_fnc" >
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;<a *ngIf="!this.authService.isLoggedIn">Login / Sign Up</a>&nbsp;<a (click)="logout()" *ngIf="this.authService.isLoggedIn" >Logout</a>
+      
+     
+    </div>
+   </div>
+</header>
+
+  <div class="container">
+    <div class="row mt-4 mb-2">
+    <div class="col-3 no-padding">  
+    <a routerLink="/" > <img src="/assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
+    </div> 
+    <div class="col-6"><div class="input-group mb-3">
+        <input type="text" class="form-control check-pin" placeholder="Check Availability"  >
+        <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
+      </div></div>  
+    <div class="col-3">
+        <ul class="top-right-cart">
+            <li><button class="btn download-app" type="button" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
+            <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+        </ul>
+
+
+    </div>   
+    </div> 
+    <div class="row mb-3 catagory_wrap">
+        <div class="col-3 no-padding">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle category_dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop By Category
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Restaurants</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Baby Care</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Beverages</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Dairy & Bakery</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Egg Fish & Meat</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Electronics</a></li>
+                </ul>
+              </div>
+        </div>
+        <div class="col-9 no-padding">
+            <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+<label class="btn switch_categpry" for="success-outlined"><i class="fa fa-shopping-basket" aria-hidden="true"></i>&nbsp;Groceries</label>
+
+<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+<label class="btn switch_categpry" for="danger-outlined"><i class="fa fa-cutlery" aria-hidden="true"></i>&nbsp;Restaurants</label>
+        </div>
+    </div>   
+  </div>
+
+

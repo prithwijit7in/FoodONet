@@ -45,6 +45,16 @@ import { SuperadminVendorProductListComponent } from './Components/Super-admin/s
 import { SuperadminSearchConsumerComponent } from './Components/Super-admin/superadmin-search-consumer/superadmin-search-consumer.component';
 import { SuperadminConsumerDetailsComponent } from './Components/Super-admin/superadmin-consumer-details/superadmin-consumer-details.component';
 import { SuperadminConsumerComplaintsDetailsComponent } from './Components/Super-admin/superadmin-consumer-complaints-details/superadmin-consumer-complaints-details.component';
+import { HomepageComponent } from './Frontend/homepage/homepage.component';
+import { FrontendHeaderComponent } from './Frontend/frontend-header/frontend-header.component';
+import { FrontendFooterComponent } from './Frontend/frontend-footer/frontend-footer.component';
+import { HomepageBannerComponent } from './Frontend/Component/homepage-banner/homepage-banner.component';
+import { HomepageOfferZoneComponent } from './Frontend/Component/homepage-offer-zone/homepage-offer-zone.component';
+import { HomepageCategorySliderComponent } from './Frontend/Component/homepage-category-slider/homepage-category-slider.component';
+import { HomepageQABannerComponent } from './Frontend/Component/homepage-qa-banner/homepage-qa-banner.component';
+import { HomepageFavBrandComponent } from './Frontend/Component/homepage-fav-brand/homepage-fav-brand.component';
+import { HomepageJustInComponent } from './Frontend/Component/homepage-just-in/homepage-just-in.component';
+import { HomepageReviewComponent } from './Frontend/Component/homepage-review/homepage-review.component';
 
 
 @NgModule({
@@ -86,6 +96,16 @@ import { SuperadminConsumerComplaintsDetailsComponent } from './Components/Super
     SuperadminSearchConsumerComponent,
     SuperadminConsumerDetailsComponent,
     SuperadminConsumerComplaintsDetailsComponent,
+    HomepageComponent,
+    FrontendHeaderComponent,
+    FrontendFooterComponent,
+    HomepageBannerComponent,
+    HomepageOfferZoneComponent,
+    HomepageCategorySliderComponent,
+    HomepageQABannerComponent,
+    HomepageFavBrandComponent,
+    HomepageJustInComponent,
+    HomepageReviewComponent,
     
 
   ],

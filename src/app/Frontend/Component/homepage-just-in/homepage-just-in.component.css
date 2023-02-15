@@ -1,0 +1,83 @@
+.footer_title{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    font-weight: normal;
+    background: #00b3a1;
+    padding: 5px 8px;
+}
+
+.carousel_container{
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.view_all{
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 8px;
+    text-decoration: none;
+}
+.view_all:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.product_border{padding: 15px;}
+.product_border .product_wrap{border: 1px solid #ccc;}
+.product_list{padding: 0px 3px; }
+.product_list li{width: 21%;display: inline-block;
+    border: 1px solid #ccc;
+    margin-right: 5%;padding: 20px;
+    border-radius: 10px;
+ 
+    vertical-align: top;
+}
+
+.product_list li:last-child{margin-right: 0px;}   
+.pro_img{ text-align: center;} 
+.pro_name{ color: #00b3a1;
+    font-size: 12px;
+    margin: 5px 0px;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+.pro_weight{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #686969;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 2px;
+    margin-bottom: 10px;
+}
+.pro_price{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 3px;
+}
+.pro_price span{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #686969;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.add_btn{
+    border: 1px solid #00b3a1;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #00b3a1;
+    padding: 0px 10px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 14px;
+}
+.add_btn:hover{
+    cursor: pointer;
+    background: #00b3a1;
+    color: #fff;
+}
