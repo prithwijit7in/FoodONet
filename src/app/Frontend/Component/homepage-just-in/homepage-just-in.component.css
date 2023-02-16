@@ -33,6 +33,9 @@
     border-radius: 10px;
  
     vertical-align: top;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
+box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
 }
 
 .product_list li:last-child{margin-right: 0px;}   

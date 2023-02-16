@@ -31,7 +31,11 @@
     padding: 5%;
     padding: 4%;
     width: 50%;
-    margin: 10% auto 5% auto; text-align: center;}
+    margin: 10% auto 5% auto; text-align: center;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.37);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.37);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.37);
+}
 .author_name{color: #fff;
     font-family: Tahoma, "Trebuchet MS", sans-serif;
     font-weight: bold;

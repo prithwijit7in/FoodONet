@@ -3,8 +3,8 @@
   <div class="container">
     <div class="top-left no-padding">Customer Care: 1234567890 is available from 10am to 8pm for any queries, feedback or issues</div>
     <div class="top-right" id="login_fnc" >
-      <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;<a *ngIf="!this.authService.isLoggedIn">Login / Sign Up</a>&nbsp;<a (click)="logout()" *ngIf="this.authService.isLoggedIn" >Logout</a>
-      
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;<a *ngIf="!this.authService.isLoggedIn">User Login / Sign Up</a>&nbsp;<a (click)="logout()" *ngIf="this.authService.isLoggedIn" >Logout</a> |&nbsp;
+      <i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;<a routerLink="/admin">Admin Login</a>
      
     </div>
    </div>
