@@ -1,0 +1,354 @@
+<app-frontend-header></app-frontend-header>
+<div class="container mt-3 mb-2 no-padding">
+<div class="footer_title">Payment</div>
+
+<div class="row">
+
+
+    <div class="col-3 no-pad-r"> <!-- required for floating -->
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs tabs-left">
+        <li [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs">
+          <a (click)="tabChange(tab)">{{tab.name}}</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="col-5 right-payment">
+      <div class="tab-content">
+        <div class="tab-pane active" [ngClass]="{'showTab':selectedUserTab == 1, 'hideTab':selectedUserTab != 1}"> <!-- Profile tab -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Add Credit / Debit Card
+                </div> 
+                <div class="panel-body">
+                    
+                        <div class="card">
+                        
+                        <div class="card-body">
+                        <div class="row mb-2">
+                        <div class="col-sm-12">
+                        <div class="form-group">
+                            
+                        
+                            
+                        <label for="name">Name</label>
+                        <input class="form-control" id="name" type="text" placeholder="Enter your name">
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                        <div class="col-sm-12">
+                        <div class="form-group">
+                        <label for="ccnumber">Credit Card Number</label>
+                        
+                        
+                        <div class="input-group">
+                        <input class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
+                        <div class="input-group-append">
+                        <span class="input-group-text">
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        </span>
+                        </div>
+                        </div> 
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                        <div class="form-group col-sm-4">
+                        <label for="ccmonth">Month</label>
+                        <select class="form-control" id="ccmonth">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        </select>
+                        </div>
+                        <div class="form-group col-sm-4">
+                        <label for="ccyear">Year</label>
+                        <select class="form-control" id="ccyear">
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-4">
+                        <div class="form-group">
+                        <label for="cvv">CVV/CVC</label>
+                        <input class="form-control" id="cvv" type="text" placeholder="123">
+                        </div>
+                        </div>
+                        </div>
+                        
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-warning" type="button" ><b><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Place Order & Pay</b> </button>
+                        
+                        </div>
+                        </div>
+                        
+                </div>  
+            </div>
+        </div>
+
+        <div class="tab-pane active" [ngClass]="{'showTab':selectedUserTab == 2, 'hideTab':selectedUserTab != 2}"> <!-- Change password tab -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Choose Your Bank For Net Banking
+                </div> 
+                <div class="panel-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <select class="form-select" aria-label=".form-select-lg example">
+                                <option selected>Select Your Bank</option>
+                                <option value="1">State Bank of India</option>
+                                <option value="2">ICICI Bank Ltd</option>
+                                <option value="3">HDFC Bank Ltd</option>
+                              </select>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-warning" type="button" ><b><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Place Order & Pay</b> </button>
+                        
+                        </div>
+
+                    </div>
+
+                </div>  
+            </div>
+        </div>
+
+        <div class="tab-pane active" [ngClass]="{'showTab':selectedUserTab == 3, 'hideTab':selectedUserTab != 3}"> <!-- Admin tab -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Add Your UPI Number
+                </div> 
+                <div class="panel-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Enter UPI Address(Ex:XXXXXXXXXX@sbi)" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Verify</button>
+                            </div>
+                            
+                            <div class="alert alert-secondary" role="alert">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp; A payment request will be sent to your UPI Id
+                              </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-warning" type="button" ><b><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Place Order & Pay</b> </button>
+                        
+                        </div>
+
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        <div class="tab-pane active" [ngClass]="{'showTab':selectedUserTab == 4, 'hideTab':selectedUserTab != 4}"> <!-- stripe account tab -->
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                Cash On Delivery
+              </div> 
+              <div class="panel-body">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter Your Registered Mobile Number" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Verify</button>
+                        </div>
+                        
+                        <div class="alert alert-secondary" role="alert">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp; To make contactless delivery, we recommend to use Online payment methods.
+                          </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-warning" type="button" ><b><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Place Order & Pay At Delivery Time</b> </button>
+                    
+                    </div>
+
+                </div>
+              </div>    
+          </div>
+        </div>   
+      </div>
+    </div>
+
+    <div class="col-4 payment_cart_wrap">
+        
+            <div class="row">
+                <div class="col-10 cart_title mt-2 mb-0">My Cart</div>
+               
+            </div>
+        <div class="cart-step1">    
+            <div class="scrollbar" id="style-9">
+            <div class="product_scroll">
+            <div class="Product_in_cart" >
+                <div class="row">
+                    <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
+                    <div class="col-8">
+                        <div class="row">
+                        <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="product_desc">Whole Grain and fresh quality</div>
+                        <div class="col-12">
+                            <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                            <span class="pro_qty">100g</span>
+                            
+                        </div>
+                        <div class="product_price">&#8377; 345</div>
+                    </div>
+        
+                </div>
+        
+        
+            </div>
+            <div class="Product_in_cart">
+                <div class="row">
+                    <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
+                    <div class="col-8">
+                        <div class="row">
+                        <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="product_desc">Whole Grain and fresh quality</div>
+                        <div class="col-12">
+                            <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                            <span class="pro_qty">100g</span>
+                            
+                        </div>
+                        <div class="product_price">&#8377; 345</div>
+                    </div>
+        
+                </div>
+        
+        
+            </div>
+            <div class="Product_in_cart">
+                <div class="row">
+                    <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
+                    <div class="col-8">
+                        <div class="row">
+                        <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="product_desc">Whole Grain and fresh quality</div>
+                        <div class="col-12">
+                            <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                            <span class="pro_qty">100g</span>
+                            
+                        </div>
+                        <div class="product_price">&#8377; 345</div>
+                    </div>
+        
+                </div>
+        
+        
+            </div>
+            <div class="Product_in_cart">
+                <div class="row">
+                    <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
+                    <div class="col-8">
+                        <div class="row">
+                        <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="product_desc">Whole Grain and fresh quality</div>
+                        <div class="col-12">
+                            <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                            <span class="pro_qty">100g</span>
+                            
+                        </div>
+                        <div class="product_price">&#8377; 345</div>
+                    </div>
+        
+                </div>
+        
+        
+            </div>
+        
+            
+            </div>
+            </div>
+            <div class="cart_step2">
+                <div class="col-12 product_name mt-2">Your Delivery Address</div>
+                <div class="col-12 mt-3">
+    
+                    <div class="address_wrap">
+                       
+                        <label class="btn btn-default" for="a25">
+                            <div class="deliver_name">Ayan Pramanik</div>
+                            <div class="delivery_address">Niloy Apartment, 4B Vibekananda road,, 1st floor,flat no 101, KOLKATA, WEST BENGAL, 700092, India, Phone number: 1234567893</div>
+            
+                        </label>
+                      </div>
+    
+                </div>
+    
+                
+            </div>
+            
+            
+            <div class="Product_in_wrap mb-3">
+                <div class="product_name">Invoice Details</div>
+                <div class="col-12">
+                    <table class="table table-sm table-borderless mb-0">
+                        
+                    <tbody>
+                      <tr>
+                        <td>Item Total</td>
+                        <td>&#8377; 1000.00</td>
+                      </tr>
+                      <tr>
+                        <td>Delivery Fee(1.8 Kgs)</td>
+                        <td>&#8377; 35</td>
+                      </tr>
+                      <tr>
+                        <td>Taxes</td>
+                        <td>&#8377; 180</td>
+                      </tr>
+                    </tbody>
+                    <tfoot class="total_invoice">
+                        <tr>
+                            <th>Total</th>
+                            <th>&#8377; 1220</th>
+                        </tr>
+                    </tfoot>
+                  
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<app-frontend-footer></app-frontend-footer>

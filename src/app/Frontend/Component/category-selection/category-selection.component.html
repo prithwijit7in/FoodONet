@@ -1,0 +1,26 @@
+<div class="container">
+<div class="row mb-3 catagory_wrap">
+    <div class="col-3 no-padding">
+        <div ngbDropdown  class="dropdown">
+            <button class="btn dropdown-toggle category_dropdown" type="button" id="dropdownBasic1" ngbDropdownToggle>
+              Shop By Category
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <li><a class="dropdown-item" routerLink="/product_category" ngbDropdownItem><i class="fa fa-caret-right" aria-hidden="true"></i>Restaurants</a></li>
+              <li><a class="dropdown-item" routerLink="/product_category" ngbDropdownItem><i class="fa fa-caret-right" aria-hidden="true"></i>Baby Care</a></li>
+              <li><a class="dropdown-item" routerLink="/product_category" ngbDropdownItem><i class="fa fa-caret-right" aria-hidden="true"></i>Beverages</a></li>
+              <li><a class="dropdown-item" routerLink="/product_category" ngbDropdownItem><i class="fa fa-caret-right" aria-hidden="true"></i>Dairy & Bakery</a></li>
+              <li><a class="dropdown-item" routerLink="/product_category" ngbDropdownItem><i class="fa fa-caret-right" aria-hidden="true"></i>Egg Fish & Meat</a></li>
+              <li><a class="dropdown-item" routerLink="/product_category" ngbDropdownItem><i class="fa fa-caret-right" aria-hidden="true"></i>Electronics</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-9 no-padding">
+        <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+<label class="btn switch_categpry" for="success-outlined"><i class="fa fa-shopping-basket" aria-hidden="true"></i>&nbsp;Groceries</label>
+
+<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+<label class="btn switch_categpry" for="danger-outlined"><i class="fa fa-cutlery" aria-hidden="true"></i>&nbsp;Restaurants</label>
+    </div>
+</div> 
+</div>

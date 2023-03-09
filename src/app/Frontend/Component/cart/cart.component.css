@@ -19,12 +19,119 @@
     color: #222;
 }
 .close{ font-size: 22px; color: #222; cursor: pointer;}
-.Product_in_cart{background: #fff;padding: 10px; border-radius: 10px; margin-top: 15px;}
-.product_name{font-size: 18px;
+.Product_in_cart{background: #fff;padding: 6px; border-radius: 10px; margin-bottom: 10px;}
+.product_name{font-size: 16px;
     font-weight: bold;
-    font-family: Tahoma, "Trebuchet MS", sans-serif;
-    color: #222;line-height: 22px;
+    line-height: 18px;
+    color: #222;
 }
 .product_desc{font-size: 14px;
-    font-weight: normal; margin: 10px 0px;
+    font-weight: normal; margin: 5px 0px;
     color: #9c9a9a;}
+.pro_qty{font-size: 13px;
+    font-weight: bold; margin: 5px 0px;
+    color: #222; margin-left: 20px;}
+.pro_qnty{
+    border: 1px solid #ccc;border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    
+    color: #222;
+    padding: 5px;
+}    
+.product_price{
+    color:#e44656;
+    font-size: 16px;
+    font-weight: bold;
+    
+    margin: 7px 0px;
+}
+.del_pro .fa{color:#e44656; font-size: 20px; cursor: pointer;}
+
+.scrollbar{overflow-y: scroll;height: 250px; overflow-x: hidden; margin-top: 15px; padding-right: 10px;}
+.Product_in_wrap{background: #fff;padding: 10px; border-radius: 10px; margin-top: 10px;}
+.Product_in_wrap .table tr td:last-child{text-align: right; font-weight: bold; font-size: 14px;}
+.Product_in_wrap .table tr th:last-child{text-align: right;}
+.total_invoice{background:#f2f2f2; border-top: 1px solid #f8f6f6;}
+.Product_in_wrap .table tr td{font-size: 14px;}
+.scrollbar_address{overflow-y: scroll;height: 200px; overflow-x: hidden; margin-top: 15px; padding-right: 10px;}
+
+/*
+ *  STYLE Scrollbar
+ */
+
+ #style-9::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-9::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-9::-webkit-scrollbar-thumb
+{
+	background-color: #F90;border-radius: 10px;	
+	background-image: -webkit-linear-gradient(90deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+.address_wrap {
+    float: left;
+    padding:6px;
+    width: 100%;
+    position: relative;
+    min-height:130px ;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+ 
+  .address_wrap label,
+  .address_wrap input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .address_wrap input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+    cursor: pointer;
+  }
+  
+  .address_wrap input[type="radio"]:checked + label {
+    background: #00b3a0;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .address_wrap input[type="radio"]:checked + label div{color:#fff !important;}
+  
+  .address_wrap label {
+    cursor: pointer;
+    z-index: 90;
+    text-align: left;
+  }
+  .add_address{cursor: pointer;}
+  .deliver_name{font-size: 14px;
+    font-weight: bold; color: #222;}
+    .delivery_address{font-size: 14px;font-weight: normal; color: #222;}
+    .edit_address{color: #F90;font-size: 14px;font-weight: bold; cursor: pointer; text-decoration: underline;}
+.add_address_wrap{background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 10px 0px 10px;
+    border-radius: 10px;}

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage-fav-brand.component.css']
 })
 export class HomepageFavBrandComponent implements OnInit {
-
+ 
   constructor() { }
 
   ngOnInit(): void {

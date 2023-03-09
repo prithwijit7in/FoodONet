@@ -1,29 +1,211 @@
-<div class="overlay"></div>
-<div class="cart">
+<div class="disable_screen"></div>
+<div class="cart" >
 <div class="cart_wrapper" >
     <div class="row">
         <div class="col-10 cart_title">My Cart</div>
-        <div class="col-2"><i class="fa fa-times close" aria-hidden="true" (click)="redirectTo()"></i></div>
+        <div class="col-2"><i class="fa fa-times close" aria-hidden="true" (click)="redirectTo()" ></i></div>
     </div>
-
-    <div class="Product_in_cart">
+<div class="cart-step1" *ngIf="isOn">    
+    <div class="scrollbar" id="style-9">
+    <div class="product_scroll">
+    <div class="Product_in_cart" >
         <div class="row">
             <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
             <div class="col-8">
-                <div class="product_name">Import Quality Dry food package</div>
+                <div class="row">
+                <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                </div>
                 <div class="product_desc">Whole Grain and fresh quality</div>
                 <div class="col-12">
-                    <input type="number" value="1" min="0" max="10" step="1"/>
+                    <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                    <span class="pro_qty">100g</span>
                     
-
                 </div>
-                <div class="product_price">345</div>
+                <div class="product_price">&#8377; 345</div>
             </div>
 
         </div>
 
 
     </div>
+    <div class="Product_in_cart">
+        <div class="row">
+            <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
+            <div class="col-8">
+                <div class="row">
+                <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                </div>
+                <div class="product_desc">Whole Grain and fresh quality</div>
+                <div class="col-12">
+                    <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                    <span class="pro_qty">100g</span>
+                    
+                </div>
+                <div class="product_price">&#8377; 345</div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="Product_in_cart">
+        <div class="row">
+            <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
+            <div class="col-8">
+                <div class="row">
+                <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                </div>
+                <div class="product_desc">Whole Grain and fresh quality</div>
+                <div class="col-12">
+                    <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                    <span class="pro_qty">100g</span>
+                    
+                </div>
+                <div class="product_price">&#8377; 345</div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="Product_in_cart">
+        <div class="row">
+            <div class="col-4"><img class="img-fluid" src="assets/images/dry-fruits-2.jpg" alt="Image 1"/> </div>
+            <div class="col-8">
+                <div class="row">
+                <div class="product_name col-10">Import Quality Dry food package</div><div class="del_pro col-2" ><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+                </div>
+                <div class="product_desc">Whole Grain and fresh quality</div>
+                <div class="col-12">
+                    <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> 
+                    <span class="pro_qty">100g</span>
+                    
+                </div>
+                <div class="product_price">&#8377; 345</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
     
+    </div>
+    </div>
+    <div class="Product_in_wrap">
+        <div class="row">
+            <div class="col-12 product_name">Would you like to apply Promocode ?</div>
+            <div class="col-12 mt-3"><div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter Your promocode here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-warning" type="button" id="button-addon2">Submit</button>
+              </div></div>
+        </div>
+
+    </div>
+    <div class="Product_in_wrap">
+        <div class="product_name">Invoice Details</div>
+        <div class="col-12">
+            <table class="table table-sm table-borderless mb-0">
+                
+            <tbody>
+              <tr>
+                <td>Item Total</td>
+                <td>&#8377; 1000.00</td>
+              </tr>
+              <tr>
+                <td>Delivery Fee(1.8 Kgs)</td>
+                <td>&#8377; 35</td>
+              </tr>
+              <tr>
+                <td>Taxes</td>
+                <td>&#8377; 180</td>
+              </tr>
+            </tbody>
+            <tfoot class="total_invoice">
+                <tr>
+                    <th>Total</th>
+                    <th>&#8377; 1220</th>
+                </tr>
+            </tfoot>
+          
+            </table>
+        </div>
+    </div>
+    <div class="d-grid gap-2 col-12 mx-auto mt-3">
+        <button class="btn btn-warning" type="button" (click)="isOn= false"><b>PROCEED TO CHECKOUT&nbsp;&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></b> </button>
+      </div>
+</div>
+
+<div class="cart_step2" *ngIf="!isOn">
+    <div class="col-12 product_name mt-2">Please Select Delivery Addresses</div>
+    <div class="col-12 mt-3">
+        <div class="scrollbar_address" id="style-9">
+            <div class="product_scroll">
+        <div class="address_wrap">
+            <input type="radio" id="a25" name="check-substitution-2" />
+            <label class="btn btn-default" for="a25">
+                <div class="deliver_name">Ayan Pramanik</div>
+                <div class="delivery_address">Niloy Apartment, 4B Vibekananda road,, 1st floor,flat no 101, KOLKATA, WEST BENGAL, 700092, India, Phone number: 1234567893</div>
+                <div class="edit_address">Edit Address</div>
+
+            </label>
+          </div>
+          <div class="address_wrap">
+            <input type="radio" id="a25" name="check-substitution-2" />
+            <label class="btn btn-default" for="a25">
+                <div class="deliver_name">Ayan Pramanik</div>
+                <div class="delivery_address">Surya Apartment,, 1st floor,flat no 101, KOLKATA, WEST BENGAL, 700022, India, Phone number: 1234567893</div>
+                <div class="edit_address">Edit Address</div>
+
+            </label>
+          </div>
+         
+          </div>
+          </div>
+    </div>
+    <div class="col-12 product_name mt-2 mb-3 add_address" >OR, Add a New Address</div>
+    <div class="add_address_wrap"  >
+        <div class="mb-2 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Name:</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" id="staticEmail" value="">
+            </div>
+        </div>
+        <div class="mb-2 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Mobile:</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" id="staticEmail" value="">
+            </div>
+            
+        </div>
+        <div class="mb-2 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Pin:</label>
+            <div class="col-sm-4">
+              <input type="text"  class="form-control" id="staticEmail" value="">
+            </div>
+            <label for="staticEmail" class="col-sm-1 col-form-label">Dist:</label>
+            <div class="col-sm-5">
+              <input type="text"  class="form-control" id="staticEmail" value="">
+            </div>
+        </div>
+        <div class="mb-2 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Address:</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+        </div>
+        <div class="mb-2 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+              <button type="button" class="btn btn-success btn-sm">Save This Address</button>
+            </div>
+        </div>
+          
+    </div>
+    <div class="d-grid gap-2 col-12 mx-auto mt-3">
+        <button class="btn btn-warning" type="button" routerLink="/payment"><b><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Proceed To Checkout</b> </button>
+    </div>
+</div>
+
 </div>
 </div>

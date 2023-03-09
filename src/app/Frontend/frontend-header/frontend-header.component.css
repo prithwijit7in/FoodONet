@@ -80,3 +80,9 @@
     font-family: Tahoma, "Trebuchet MS", sans-serif;
     line-height: 27px;
 }
+.cart{display: none;}
+.header_shadow{
+-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+}

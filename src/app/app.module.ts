@@ -55,6 +55,14 @@ import { HomepageQABannerComponent } from './Frontend/Component/homepage-qa-bann
 import { HomepageFavBrandComponent } from './Frontend/Component/homepage-fav-brand/homepage-fav-brand.component';
 import { HomepageJustInComponent } from './Frontend/Component/homepage-just-in/homepage-just-in.component';
 import { HomepageReviewComponent } from './Frontend/Component/homepage-review/homepage-review.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CartComponent } from './Frontend/Component/cart/cart.component';
+import { PaymentComponent } from './Frontend/Component/payment/payment.component';
+import { SignInComponent } from './Frontend/Component/sign-in/sign-in.component';
+import { CategorySelectionComponent } from './Frontend/Component/category-selection/category-selection.component';
+import { UserSignupComponent } from './Frontend/Component/user-signup/user-signup.component';
+import { ProductCategoryComponent } from './Frontend/Component/product-category/product-category.component';
+import { ProductCategoryLeftpanelComponent } from './Frontend/Component/product-category-leftpanel/product-category-leftpanel.component';
 
 
 @NgModule({
@@ -106,6 +114,13 @@ import { HomepageReviewComponent } from './Frontend/Component/homepage-review/ho
     HomepageFavBrandComponent,
     HomepageJustInComponent,
     HomepageReviewComponent,
+    CartComponent,
+    PaymentComponent,
+    SignInComponent,
+    CategorySelectionComponent,
+    UserSignupComponent,
+    ProductCategoryComponent,
+    ProductCategoryLeftpanelComponent,
     
 
   ],
@@ -114,7 +129,8 @@ import { HomepageReviewComponent } from './Frontend/Component/homepage-review/ho
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     {

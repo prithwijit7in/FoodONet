@@ -4,7 +4,7 @@
     <div class="top-left">Customer Care: 1234567890 is available from 10am to 8pm for any queries, feedback or issues</div>
     <div class="top-right" id="login_fnc" >
       <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;<a *ngIf="!this.authService.isLoggedIn">Login</a>&nbsp;<a (click)="logout()" *ngIf="this.authService.isLoggedIn" >Logout</a>
-      <div class="collapse login-dropdown" *ngIf="this.authService.doLogout" >
+      <div class="collapse login-dropdown" >
         <ul>
           <li><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;<a routerLink="/">Super Admin</a></li>
           <li><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;<a routerLink="/">Admin</a></li>

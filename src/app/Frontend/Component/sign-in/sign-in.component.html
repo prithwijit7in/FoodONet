@@ -1,0 +1,114 @@
+<app-frontend-header></app-frontend-header>
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-7">
+          <div class="card shadow-2-strong" style="background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">User Login</h2>
+              
+              <form >
+              <div class="super_admin_login">
+                <div class="mb-3 row">
+                  <label for="vendor_userid" class="col-sm-4 col-form-label form-label">User Id</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="vendor_userid" >
+                  </div>
+                </div>
+               
+                <div class="mb-3 row">
+                    <label for="vendor_password" class="col-sm-4 col-form-label form-label">Password</label>
+                    <div class="col-sm-8">
+                      <input type="password" class="form-control" id="vendor_pass">
+                    </div>
+                </div>  
+
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label form-label"></label>
+                    <div class="col-sm-5">
+                        <div class="ttw_button_container">
+                            <button class="ttw_button" type="submit" routerLink="/vendor_registration_contact_details">Login</button>
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                <h3 class="mb-2 text-center">Or</h3>
+                <div class="mb-3 row">
+                    <label for="email_id" class="col-sm-4 col-form-label form-label">Send OTP To</label>
+                    <div class="col-sm-7 mt-2 radio-level-green">
+                        <div class="input-group">
+                           
+                              
+                            
+                              <input class="form-check-input" type="radio" id="superadmin" name="otp" checked [(ngModel)]="otp" [value]="false" [checked]="!otp"><label for="emailotp">Email Id</label>
+                            
+                              <input type="radio" class="form-check-input" id="otp" name="admin" [(ngModel)]="otp" [value]="true" [checked]="otp"><label for="mobotp">Mobile</label>
+                             
+                          </div>
+                       
+                     
+                    </div>
+   
+                </div> 
+                
+                <div *ngIf="!otp">
+                <div class="mb-3 row" >
+                    <label for="email_id" class="col-sm-4 col-form-label form-label">Email Id </label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" id="vendor_email" >
+                    </div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Send OTP</button></div>
+   
+                </div> 
+                <div class="mb-3 row">
+                    <label for="email_verification_code" class="col-sm-4 col-form-label form-label">Verfication Code</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" id="email_verification_code" >
+                    </div>
+                    
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Verify</button></div>
+    
+                </div> 
+                </div>
+                <div *ngIf="otp">
+                <div class="mb-3 row" >
+                    <label for="mobile_no" class="col-sm-4 col-form-label form-label">Mobile No</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" id="mob_no" >
+                    </div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Send OTP</button></div>
+                </div> 
+                <div class="mb-3 row">
+                    <label for="mobile_no_verification" class="col-sm-4 col-form-label form-label">Verification Code</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" id="mob_no_verification" >
+                    </div>
+                   
+                    <div class="col-sm-3"><button type="button" class="btn btn-secondary">Verify</button></div>
+                </div>
+                </div> 
+                <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label form-label"></label>
+                  <div class="col-sm-5">
+                      <div class="ttw_button_container">
+                          <button class="ttw_button" type="submit" routerLink="/vendor_add_product">Sign In</button>
+                      </div>
+                  </div>
+                 
+                </div>
+              
+
+                <div class="mt-2 text-center">Dont you have any Account ? <a routerLink="/user_signup">Sign Up</a></div>
+
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-frontend-footer></app-frontend-footer>
+<router-outlet></router-outlet>

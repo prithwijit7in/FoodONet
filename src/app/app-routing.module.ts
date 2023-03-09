@@ -32,6 +32,10 @@ import { VendorSignupDocumentUploadComponent } from './Components/Vendors/vendor
 import { VendorSignupLegalInfoComponent } from './Components/Vendors/vendor-signup-legal-info/vendor-signup-legal-info.component';
 import { VendorSignupStep1Component } from './Components/Vendors/vendor-signup-step1/vendor-signup-step1.component';
 import { VendorSignupStep2Component } from './Components/Vendors/vendor-signup-step2/vendor-signup-step2.component';
+import { PaymentComponent } from './Frontend/Component/payment/payment.component';
+import { ProductCategoryComponent } from './Frontend/Component/product-category/product-category.component';
+import { SignInComponent } from './Frontend/Component/sign-in/sign-in.component';
+import { UserSignupComponent } from './Frontend/Component/user-signup/user-signup.component';
 import { HomepageComponent } from './Frontend/homepage/homepage.component';
 import { AuthGuard } from './shared/auth.guard';
 
@@ -71,6 +75,10 @@ const routes: Routes = [
   { path: 'superadmin_consumer_details', component: SuperadminConsumerDetailsComponent},
   { path: 'superadmin_consumer_complaint_details', component: SuperadminConsumerComplaintsDetailsComponent},
   { path: 'Homepage', component: HomepageComponent },
+  { path: 'payment', component: PaymentComponent },
+  { path: 'user_login', component: SignInComponent },
+  { path: 'user_signup', component: UserSignupComponent },
+  { path: 'product_category', component: ProductCategoryComponent },
 ];
 
 @NgModule({

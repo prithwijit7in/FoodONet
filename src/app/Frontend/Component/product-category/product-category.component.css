@@ -1,0 +1,92 @@
+.header_shadow{
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.33);
+    }
+.product_bredcumb{
+    color: #222;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.product_cat ul{ padding: 0; margin: 0; border: 1px solid #efeeee;}
+.product_cat ul li{ padding: 5px; border-bottom: 1px solid #efeeee; list-style: none; border-left: 4px solid #fff; color:#222;font-size: 14px; font-weight:600;font-family: Tahoma, "Trebuchet MS", sans-serif;}
+.product_cat ul li:hover{ background-color: #ccf0ec; border-left: 4px solid #00b3a1; cursor: pointer;}
+.product_cat ul li:last-child{border-bottom: none;}
+.product_cat ul li img{margin-right: 5px;}
+.category_filter .filter_title{color:#222;font-size: 22px; font-weight:600;font-family: Tahoma, "Trebuchet MS", sans-serif;}
+.filter_section{ padding: 10px; border: 1px solid #efeeee;}
+.filer_category h5{ margin-bottom:10px;color: #222;font-size: 15px;display: inline-block; font-weight:600;font-family: Tahoma, "Trebuchet MS", sans-serif; border-bottom: 2px solid #00b3a1;}
+.filer_category ul{ margin: 0px; padding:0px;}
+.filer_category ul li{ list-style: none; color:#ccc; font-size: 14px;}
+.product_cat ul li.active{ background-color: #ccf0ec; border-left: 4px solid #00b3a1; cursor: pointer;}
+
+
+
+.product_border{padding: 15px;}
+.product_border .product_wrap{border: 1px solid #ccc;}
+.product_list{padding: 0px 3px; }
+.product_list li{width: 30%;display: inline-block;
+    border: 1px solid #ccc;
+    margin-right: 5%;padding: 20px;
+    border-radius: 10px;
+ 
+    vertical-align: top;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
+box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
+margin-bottom: 3%;
+}
+
+.product_list li:nth-child(3n) {
+
+margin-right: 0px !important;
+}
+
+.product_list li:last-child{margin-right: 0px;}   
+.pro_img{ text-align: center;} 
+.pro_name{ color: #00b3a1;
+    font-size: 12px;
+    margin: 5px 0px;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+.pro_weight{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #686969;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 2px;
+    margin-bottom: 10px;
+}
+.pro_price{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 3px;
+}
+.pro_price span{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #686969;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.add_btn{
+    border: 1px solid #00b3a1;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #00b3a1;
+    padding: 0px 10px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 14px;
+}
+.add_btn:hover{
+    cursor: pointer;
+    background: #00b3a1;
+    color: #fff;
+}
+.cat_title_wrap{ background-color: #ccf0ec; margin-bottom: 20px; padding: 13px;}
+.product_cat_title{font-family: Tahoma, "Trebuchet MS", sans-serif;color: #222; font-size: 18px; font-weight: 600;}
